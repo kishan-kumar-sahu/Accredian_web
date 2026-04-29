@@ -5,7 +5,8 @@ import  AppContext  from "./AppContext";
    export const AppState  =(props)=>{
   
 
-   const URL= "http://localhost:5000/api";
+
+   const URL= "https://accredian-web.onrender.com/api";
 
        
      
