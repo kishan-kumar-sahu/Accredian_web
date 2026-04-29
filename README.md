@@ -43,5 +43,3 @@ project-root/
 │   │   └── index.css
 │   │
 │   └── package.json
-│
-└── README.md
