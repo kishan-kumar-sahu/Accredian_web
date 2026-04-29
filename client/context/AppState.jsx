@@ -5,7 +5,7 @@ const URL = "https://accredian-webbb.onrender.com/api";
 
 const AppState = (props) => {
 
-  const Register = async (name,email, phone, domain, companyName, candidate, modeOfDelivery) => {
+  const RegisterUser = async (name,email, phone, domain, companyName, candidate, modeOfDelivery) => {
     try {
       const res = await axios.post(
         `${URL}/register`,
@@ -26,7 +26,7 @@ const AppState = (props) => {
   };
 
   return (
-    <AppContext.Provider value={{ Register }}>
+    <AppContext.Provider value={{  RegisterUser}}>
       {props.children}
     </AppContext.Provider>
   );

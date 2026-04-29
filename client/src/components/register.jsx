@@ -2,8 +2,8 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../../context/AppContext";
 
-export default function register() {
-  const { Register } = useContext(AppContext);
+export default function Register() {
+  const {  RegisterUser } = useContext(AppContext);
   const navigate = useNavigate();
 
   const [open, setOpen] = useState(true);
@@ -32,7 +32,7 @@ export default function register() {
       return;
     }
 
-    await Register(
+    await  RegisterUser(
       name,
       email,
       phone,
