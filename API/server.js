@@ -12,7 +12,7 @@ import  express from "express"
 
      app.use(express.json())
        app.use(cors())
-   mongoDb();
+     await mongoDb();
 
    
     
