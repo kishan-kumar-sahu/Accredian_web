@@ -43,9 +43,9 @@ export default function register() {
     return;
   }
 
-       Register(name, email, phone, domain, companyName, candidate ,modeOfDelivery);
-
-    
+      await   Register(name, email, phone, domain, companyName, candidate ,modeOfDelivery);
+       
+         navigate("/")
    }
 
 
@@ -106,7 +106,7 @@ export default function register() {
               <option>offline</option>
             </select>
 
-            <button    onClick={()=>navigate("/")}    className="w-full bg-blue-600 text-white py-3 rounded-lg">
+            <button    className="w-full bg-blue-600 text-white py-3 rounded-lg">
               Submit
             </button>
           </form>

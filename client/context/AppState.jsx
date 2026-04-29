@@ -2,15 +2,14 @@ import { useEffect } from "react";
 import  AppContext  from "./AppContext";
   import axios from "axios";
 
-   export const AppState  =(props)=>{
+
+   const URL="https://accredian-webbb.onrender.com/api"
+
+
+ const AppState  =(props)=>{
   
 
-
-   const URL= "https://accredian-webbb.onrender.com/api";
-
-       
-     
-         const Register=  async(name, email, phone, domain, companyName,candidate, modeOfDelivery )=>{
+ const Register=  async(name, email, phone, domain, companyName,candidate, modeOfDelivery )=>{
 
    const res=  await  axios.post(`${URL}/register`,{name, email, phone, domain, companyName, candidate , modeOfDelivery} ,
   
@@ -27,12 +26,7 @@ import  AppContext  from "./AppContext";
          }          
               
 
-      useEffect(()=>{
-     Register()
-      },[])
-
-      
-
+   
 
 
   return(
@@ -52,3 +46,5 @@ import  AppContext  from "./AppContext";
 
 
     export default AppState;
+
+
