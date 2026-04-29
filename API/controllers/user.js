@@ -11,7 +11,7 @@ import { User } from "../models/user.js";
         
         }= req.body;
 
-         console.log( name, email, phone, domain, companyName,candidate, modeOfDeliver)
+         console.log( name, email, phone, domain, companyName,candidate,  modeOfDelivery)
          const user= await User.create({
 
           name, email, phone, domain, companyName,candidate, modeOfDelivery

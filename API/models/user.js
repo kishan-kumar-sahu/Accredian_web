@@ -8,14 +8,18 @@ const  userSchema=  new mongoose.Schema({
      email:{
         type: String
      },
-     companyName:{
+      phone:{
         type: String
-     },
-
+      },
+      
      domain:{
      type: String
        
      },
+     companyName:{
+        type: String
+     },
+
 candidate: {
   type: Number,
 },
