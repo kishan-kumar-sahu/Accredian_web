@@ -1,50 +1,35 @@
-import { useEffect } from "react";
-import  AppContext  from "./AppContext";
-  import axios from "axios";
+import AppContext from "./AppContext";
+import axios from "axios";
 
+const URL = "https://accredian-webbb.onrender.com/api";
 
-   const URL="https://accredian-webbb.onrender.com/api"
+const AppState = (props) => {
 
+  const Register = async (name,email, phone, domain, companyName, candidate, modeOfDelivery) => {
+    try {
+      const res = await axios.post(
+        `${URL}/register`,
+        { name, email, phone, domain, companyName, candidate, modeOfDelivery },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
- const AppState  =(props)=>{
-  
+      console.log("res", res.data);
+      return res.data;
 
- const Register=  async(name, email, phone, domain, companyName,candidate, modeOfDelivery )=>{
+    } catch (error) {
+      console.log("API Error:", error);
+    }
+  };
 
-   const res=  await  axios.post(`${URL}/register`,{name, email, phone, domain, companyName, candidate , modeOfDelivery} ,
-  
-{
-     headers:{
-        "Content-Type": "application/json"
-     }
-}
+  return (
+    <AppContext.Provider value={{ Register }}>
+      {props.children}
+    </AppContext.Provider>
+  );
+};
 
-   ) ;
-
-  
-       console.log("res", res.data);
-         }          
-              
-
-   
-
-
-  return(
-  <AppContext.Provider  value={{Register}}>
-
-
-           {props.children}
-  </AppContext.Provider>
-  
-
-
-
-  )
-
-
-   }
-
-
-    export default AppState;
-
-
+export default AppState;
