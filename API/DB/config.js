@@ -4,14 +4,14 @@ import mongoose from "mongoose";
          dotenv.config()
 
 
-    //   const URL="mongodb://localhost:27017/Accredian"
-    
-      const URL=process.env.Mongo_URL;   
+ const URL=process.env.Mongo_URL;   
  
 
 const connectDB = async () => {
   try {
-       await  mongoose.connect(URL).then(console.log("mongoose is connected"))
+       await  mongoose.connect(URL)
+    console.log("MongoDB connected successfully");
+
    } catch (error) {
  
        console.log("mongoose  is not connected", error)
