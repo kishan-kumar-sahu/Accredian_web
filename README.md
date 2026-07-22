@@ -4,7 +4,7 @@
 https://accredian-web-eight.vercel.app/
 
 ## GitHub Repository
-https://github.com/yourusername/accredian-clone
+https://github.com/kishan-kumar-sahu/Accredian_web
 
 ## Tech Stack
 - Next.js
