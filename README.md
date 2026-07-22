@@ -11,12 +11,15 @@ https://github.com/kishan-kumar-sahu/Accredian_web
 - React
 - Tailwind CSS
 - JavaScript
+- mongoDb
+- express
+- nodejs
 
 ## Setup Instructions
 
 1. Clone the repository
 
-git clone https://github.com/yourusername/accredian-clone.git
+git clone https://github.com/kishan-kumar-sahu/Accredian_web
 
 2. Install dependencies
 
