@@ -23,15 +23,18 @@ git clone https://github.com/kishan-kumar-sahu/Accredian_web
 
 2. Install dependencies
 
-npm install
+    cd client
+    npm install
 
-3. Run the development server
+4. Run the development server
+    cd api
+  you can see package.json  then you can install  dependencies 
 
-npm run dev
+   npx nodemon server.js or node server.js
 
 4. Open
 
-http://localhost:3000
+http://localhost:5173/
 
 ## Approach Taken
 
